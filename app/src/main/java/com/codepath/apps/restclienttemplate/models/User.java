@@ -21,7 +21,5 @@ public class User {
         user.screenName = jsonObject.getString("screen_name");
         user.profileImageUrl = jsonObject.getString("profile_image_url_https");
         return user;
-
     }
-
 }
