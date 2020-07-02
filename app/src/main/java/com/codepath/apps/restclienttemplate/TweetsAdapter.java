@@ -94,6 +94,8 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
         TextView tvName;
         TextView tvDate;
         ImageView ivMedia;
+        ImageView ivHeart;
+        Boolean heartFilled = false;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -103,6 +105,7 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
             tvName = itemView.findViewById(R.id.tvName);
             tvDate = itemView.findViewById(R.id.tvDate);
             ivMedia = itemView.findViewById(R.id.ivMedia);
+            ivHeart = itemView.findViewById((R.id.ivHeart));
 
             itemView.setOnClickListener(this);
         }
@@ -119,6 +122,19 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
             } else{
                 ivMedia.setVisibility(View.GONE);
             }
+
+            ivHeart.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if(!heartFilled){
+                        ivHeart.setImageResource(R.drawable.ic_vector_heart);
+                        heartFilled = true;
+                    } else{
+                        ivHeart.setImageResource(R.drawable.ic_vector_heart_stroke);
+                        heartFilled = false;
+                    }
+                }
+            });
         }
 
         public String getRelativeTimeAgo(String rawJsonDate) {
