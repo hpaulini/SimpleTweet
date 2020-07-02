@@ -54,7 +54,7 @@ public class ComposeActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 int tweetLength = etCompose.getText().toString().length();
                 int charsLeft = 280 - tweetLength;
-                String charsLeftMessage = Integer.toString(charsLeft) + " characters left";
+                String charsLeftMessage = Integer.toString(charsLeft) + "/280";
                 tvCount.setText(charsLeftMessage);
             }
 

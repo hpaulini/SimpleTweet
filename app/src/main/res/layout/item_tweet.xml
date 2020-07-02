@@ -64,4 +64,26 @@
         android:layout_marginStart="2dp"
         android:layout_toEndOf="@+id/ivProfileImage"
         tools:text="Helen" />
+
+    <ImageView
+        android:id="@+id/ivHeart"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivMedia"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:tint="#80aab8c2"
+        app:srcCompat="@drawable/ic_vector_heart_stroke" />
+
+    <ImageView
+        android:id="@+id/ivRt"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivMedia"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/ivHeart"
+        android:tint="#80aab8c2"
+        app:srcCompat="@drawable/ic_vector_retweet_stroke" />
 </RelativeLayout>
